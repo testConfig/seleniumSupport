@@ -2,6 +2,11 @@ package test.seleniumSupport;
 
 import java.io.File;
 import java.io.FileInputStream;
+<<<<<<< HEAD
+=======
+import java.io.FileNotFoundException;
+
+>>>>>>> branch 'master' of https://github.com/testConfig/seleniumSupport.git
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -10,6 +15,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ConnectWithExcel {
 	XSSFWorkbook xBook;
+	XSSFSheet xSheet;
 	public void getConnection(String FilePath) {
 		
 		try {
@@ -24,6 +30,7 @@ public class ConnectWithExcel {
 	}
 	
 	public String[][] getData(int SheetNumber) {
+<<<<<<< HEAD
 		XSSFSheet xSheet = xBook.getSheetAt(SheetNumber);
 		int Row_Num = xSheet.getLastRowNum();
 		int Cal_Num = xSheet.getRow(0).getLastCellNum();
@@ -37,8 +44,25 @@ public class ConnectWithExcel {
 			}
 			
 		}
+=======
+		 xSheet = xBook.getSheetAt(SheetNumber);
+		 int Row_Num = xSheet.getLastRowNum();
+		 int Cal_Num = xSheet.getRow(0).getLastCellNum();
+		 String[][] xData = new String[Row_Num][Cal_Num];
+		 for(int i=0;i<Row_Num;i++) {
+			 XSSFRow xRow = xSheet.getRow(i+1);
+			 
+			 for(int j=0;j<Cal_Num;j++) {
+				 XSSFCell xCell = xRow.getCell(j);
+				 String xValue = changeValue(xCell);
+				 xData[i][j]=xValue;
+			 }
+		 }
+		 
+>>>>>>> branch 'master' of https://github.com/testConfig/seleniumSupport.git
 		
 		return xData;
+<<<<<<< HEAD
 	}
 
 	private String changeCellValue(XSSFCell cell) {
@@ -65,5 +89,45 @@ public class ConnectWithExcel {
 			}
 			
 			return result;
+=======
+>>>>>>> branch 'master' of https://github.com/testConfig/seleniumSupport.git
 	}
+
+	private String changeValue(XSSFCell xCell) {
+		String result = null;
+		Object value;
+		if(xCell == null) {
+			result = "";
+		}
+		else
+		{
+			if(xCell.getCellTypeEnum()==CellType.STRING) {
+				result = xCell.getStringCellValue();
+			}
+			else if(xCell.getCellTypeEnum() == CellType.NUMERIC) {
+				value = (int)xCell.getNumericCellValue();
+				result = value.toString();
+				
+			}
+		}
+		return result;
+	}
+	
+	public String ExcelPath(String fileName) {
+		
+		String path = System.getProperty("user.dir")+"\\ExcelFile\\"+fileName+".xlsx";
+		return path;
+	}
+	
+	
+	public String[][] excelConnection(String fileName,int SheetNumber) {
+		getConnection(ExcelPath(fileName));
+		String[][] xData = getData(SheetNumber);
+		return xData;
+	}
+	
+	
+	
+
+	
 }
