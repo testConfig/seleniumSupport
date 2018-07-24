@@ -1,0 +1,9 @@
+<!ELEMENT STUDENTS (Student+,Teacher)>
+<!ELEMENT Student (Name,home,Sub)>
+<!ELEMENT Teacher (Name,home,Sub)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT home (#PCDATA)>
+<!ELEMENT Sub (#PCDATA)>
+<!ATTLIST Student id ID #REQUIRED>
+<!ATTLIST Teacher id ID  #IMPLIED>
+<!ATTLIST Teacher Subject ID  #REQUIRED>
