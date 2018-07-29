@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FRIENDS SYSTEM "FriendDoc.dtd">
+<FRIENDS>
+	<Best_Friend id="A1">
+		<Name>Jafor</Name>
+		<Home>Kumilla</Home>
+		<Occ>CA</Occ>
+	</Best_Friend><!-- -->
+	<Best_Friend id="A3">
+		<Name>Nisan</Name>
+		<Home>Bogura</Home>
+		<Occ>TATA</Occ>
+	</Best_Friend>
+	<Best_Friend id="A5">
+		<Name>Fuad</Name>
+		<Home>MoiMonSing</Home>
+		<Occ>Gov Job</Occ>
+	</Best_Friend>
+
+	<Best_Friend id="A6">
+		<Name>Shakil</Name>
+		<Home>Dinazpur</Home>
+		<Occ>Private Job</Occ>
+	</Best_Friend>
+	<Friend id="A2">
+		<Name>Suvo</Name>
+		<Home>Bogura</Home>
+		<Occ>Corporate</Occ>
+	</Friend><!-- -->
+
+
+
+
+
+
+</FRIENDS>

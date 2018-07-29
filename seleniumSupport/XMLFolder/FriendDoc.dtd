@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT FRIENDS (Best_Friend+,Friend)>
+<!ELEMENT Best_Friend (Name,Home,Occ)>
+<!ELEMENT Friend (Name,Home,Occ)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Home (#PCDATA)>
+<!ELEMENT Occ (#PCDATA)>
+<!ATTLIST Best_Friend id ID #REQUIRED>
+<!ATTLIST Friend id ID #REQUIRED>
