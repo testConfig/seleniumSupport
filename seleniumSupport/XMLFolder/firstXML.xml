@@ -12,7 +12,7 @@
 		<home>Dhaka</home>
 		<Sub>Commerce</Sub>
 	</Student>
-	<Teacher Subject='Math'>
+	<Teacher id='Third'>
 		<Name>Sorif</Name>
 		<home>Dhaka</home>
 		<Sub>Commerce</Sub>
