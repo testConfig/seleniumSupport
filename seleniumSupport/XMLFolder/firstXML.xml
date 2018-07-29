@@ -1,0 +1,20 @@
+<!DOCTYPE STUDENTS SYSTEM "studentType.dtd">
+<STUDENTS>
+
+	<Student id="First">
+		<Name>Ahammed</Name>
+		<home>NY</home>
+		<Sub>Science</Sub>
+
+	</Student>
+	<Student id='Second'>
+		<Name>Sorif</Name>
+		<home>Dhaka</home>
+		<Sub>Commerce</Sub>
+	</Student>
+	<Teacher id='Third'>
+		<Name>Sorif</Name>
+		<home>Dhaka</home>
+		<Sub>Commerce</Sub>
+	</Teacher>
+</STUDENTS>

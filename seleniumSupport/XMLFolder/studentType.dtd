@@ -5,5 +5,5 @@
 <!ELEMENT home (#PCDATA)>
 <!ELEMENT Sub (#PCDATA)>
 <!ATTLIST Student id ID #REQUIRED>
-<!ATTLIST Teacher id ID  #IMPLIED>
-<!ATTLIST Teacher Subject ID  #REQUIRED>
+<!ATTLIST Teacher id ID  #REQUIRED>
+<!ATTLIST Teacher Subject ID  #IMPLIED>
