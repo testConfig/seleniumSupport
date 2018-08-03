@@ -10,12 +10,16 @@ public class SQLConnection {
 	
 	public void getDataBaseConnection(String URL,String UserName,String Password,	String SQLQuery) {
 		try {
+	
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection	 xConnection = DriverManager.getConnection(URL,UserName,Password);
 			Statement xStatement = xConnection.createStatement();
 			ResultSet xresult = xStatement.executeQuery(SQLQuery);
+			
+			
+			
+			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
